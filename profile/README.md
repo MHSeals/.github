@@ -4,5 +4,5 @@
 
 ## Currently Using
  - Tensorflow Lite for buoy detection
- - Velodyne Vlp-16 LiDAR, using SLAM and gmapping
- - Weird sketchy board running Ubuntu for processing
+ - Velodyne VLP-16 LiDAR, using SLAM and gmapping
+ - Weird sketchy board running Ubuntu for processing. Using ROS
