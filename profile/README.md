@@ -3,6 +3,6 @@
 [RoboBoat](https://robonation.org/programs/roboboat/) team working to design, build, and operate a fully autonomous boat  
 
 ## Currently Using
- - Tensorflow Lite for buoy detection
- - Velodyne VLP-16 LiDAR, using SLAM and gmapping
- - Weird sketchy board running Ubuntu for processing. Using ROS
+ - OpenCV for buoy detection
+ - Intel Realsense D435 camera for depth and color detection
+ - Weird sketchy board running Ubuntu for processing via MavSDK!
