@@ -6,7 +6,7 @@
 
 # MHS Seals Roboboat Team
 
-Welcome to our GitHub organization! Here we hold all of our repositories for computer vision, mapping, planning, and navigation. All of our code is open sourced in this repository
+Welcome to our GitHub organization! Here we hold all of our repositories for computer vision, mapping, planning, and navigation. As firm believers in the benefits of open source, all of our code for the competition is open sourced in this repository.
 
 > [!IMPORTANT]  
 > We are still working on our software, none of it should be considered complete
