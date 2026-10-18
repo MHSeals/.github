@@ -4,13 +4,9 @@
   </a>
 </p>
 
-<h3 align="center">
-  <a href="https://mhsroboboat.com/">Visit our website &rarr;</a>
-</h3>
-
 # MHS Seals RoboBoat Team
 
-We're a high school robotics team from James Martin High School in Arlington, Texas, building autonomous surface vehicles for the RoboBoat competition.
+We're a high school robotics team from James Martin High School in Arlington, Texas, building autonomous surface vehicles for the RoboBoat competition. Learn more about us at [mhsroboboat.com](https://mhsroboboat.com/).
 
 As firm believers in the benefits of open source, we share our competition software so other teams can learn from it, build on it, and contribute.
 
