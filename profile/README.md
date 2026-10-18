@@ -29,8 +29,6 @@ Our ROS 2 stack connects perception, localization, planning, and control across 
 
 ## Contributors
 
-People with **2+ commits** across the repositories above. Bots are excluded; this list refreshes weekly.
-
 <!-- contributors:start -->
 <a href="https://github.com/1unarzDev"><img src="https://github.com/1unarzDev.png?size=80" width="40" height="40" alt="1unarzDev" title="1unarzDev"></a>
 <a href="https://github.com/alec-jensen"><img src="https://github.com/alec-jensen.png?size=80" width="40" height="40" alt="alec-jensen" title="alec-jensen"></a>
