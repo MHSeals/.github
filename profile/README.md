@@ -24,8 +24,9 @@ Our ROS 2 stack connects perception, localization, planning, and control across 
 | [buoy_model](https://github.com/MHSeals/buoy_model) | Training and tools for buoy detection models. |
 | [website2025](https://github.com/MHSeals/website2025) | Our team website. |
 
-[![Test suite logic (no ROS or devices)](https://github.com/MHSeals/mhseals_testing/actions/workflows/tests.yml/badge.svg?branch=main)](https://github.com/MHSeals/mhseals_testing/actions/workflows/tests.yml)
+> [!IMPORTANT]
+> Our software is actively developed; check each repository's README for setup instructions and current limitations.
 
-Our software is actively developed; check each repository's README for setup instructions and current limitations.
-
-[Visit our website](https://mhsroboboat.com/)
+<p align="center">
+  <a href="https://mhsroboboat.com/"><strong>mhsroboboat.com</strong></a>
+</p>
