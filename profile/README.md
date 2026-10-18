@@ -4,6 +4,10 @@
   </a>
 </p>
 
+<h3 align="center">
+  <a href="https://mhsroboboat.com/">Visit our website &rarr;</a>
+</h3>
+
 # MHS Seals RoboBoat Team
 
 We're a high school robotics team from James Martin High School in Arlington, Texas, building autonomous surface vehicles for the RoboBoat competition.
@@ -26,7 +30,3 @@ Our ROS 2 stack connects perception, localization, planning, and control across 
 
 > [!IMPORTANT]
 > Our software is actively developed; check each repository's README for setup instructions and current limitations.
-
-<p align="center">
-  <a href="https://mhsroboboat.com/"><strong>mhsroboboat.com</strong></a>
-</p>
