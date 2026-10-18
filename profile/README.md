@@ -26,3 +26,15 @@ Our ROS 2 stack connects perception, localization, planning, and control across 
 
 > [!IMPORTANT]
 > Our software is actively developed; check each repository's README for setup instructions and current limitations.
+
+## Contributors
+
+People with **2+ commits** across the repositories above. Bots are excluded; this list refreshes weekly.
+
+<!-- contributors:start -->
+<a href="https://github.com/1unarzDev"><img src="https://github.com/1unarzDev.png?size=80" width="40" height="40" alt="1unarzDev" title="1unarzDev"></a>
+<a href="https://github.com/alec-jensen"><img src="https://github.com/alec-jensen.png?size=80" width="40" height="40" alt="alec-jensen" title="alec-jensen"></a>
+<a href="https://github.com/evan-destafeno"><img src="https://github.com/evan-destafeno.png?size=80" width="40" height="40" alt="evan-destafeno" title="evan-destafeno"></a>
+<a href="https://github.com/lindanny1107-lang"><img src="https://github.com/lindanny1107-lang.png?size=80" width="40" height="40" alt="lindanny1107-lang" title="lindanny1107-lang"></a>
+<a href="https://github.com/Peekkoo"><img src="https://github.com/Peekkoo.png?size=80" width="40" height="40" alt="Peekkoo" title="Peekkoo"></a>
+<!-- contributors:end -->

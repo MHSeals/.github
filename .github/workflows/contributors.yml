@@ -1,0 +1,65 @@
+name: Update profile contributors
+
+on:
+  schedule:
+    - cron: '17 6 * * 1'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - profile/README.md
+      - .github/workflows/contributors.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: profile-contributors
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/github-script@v7
+        with:
+          script: |
+            const path = 'profile/README.md';
+            const branch = context.payload.repository.default_branch;
+            const { data: file } = await github.rest.repos.getContent({ ...context.repo, path, ref: branch });
+            const readme = Buffer.from(file.content, 'base64').toString('utf8');
+            const repos = [...readme.matchAll(/^\| \[[^\]]+\]\(https:\/\/github\.com\/([^/\s)]+)\/([^/\s)]+)\)/gm)];
+            if (!repos.length) throw new Error('No stack repositories found');
+            const people = new Map();
+            for (const [, owner, repo] of repos) {
+              const contributors = await github.paginate(github.rest.repos.listContributors, {
+                owner, repo, per_page: 100,
+              });
+              for (const person of contributors) {
+                if (person.type !== 'User' || person.login.endsWith('[bot]')) continue;
+                const key = person.login.toLowerCase();
+                const entry = people.get(key) || { login: person.login, commits: 0 };
+                entry.commits += person.contributions;
+                people.set(key, entry);
+              }
+            }
+            const eligible = [...people.values()].filter(person => person.commits >= 2)
+              .sort((a, b) => a.login.localeCompare(b.login, 'en', { sensitivity: 'base' }));
+            if (!eligible.length) throw new Error('No eligible contributors; preserving the existing section');
+            const avatars = eligible.map(({ login }) =>
+              `<a href="https://github.com/${login}"><img src="https://github.com/${login}.png?size=80" width="40" height="40" alt="${login}" title="${login}"></a>`
+            ).join('\n');
+            const section = /<!-- contributors:start -->[\s\S]*?<!-- contributors:end -->/g;
+            if ([...readme.matchAll(section)].length !== 1) throw new Error('Expected one contributors section');
+            const updated = readme.replace(section, `<!-- contributors:start -->\n${avatars}\n<!-- contributors:end -->`);
+            if (updated === readme) {
+              core.info('Contributors are already current');
+              return;
+            }
+            await github.rest.repos.createOrUpdateFileContents({
+              ...context.repo, path, branch, sha: file.sha,
+              message: 'Update profile contributors',
+              content: Buffer.from(updated).toString('base64'),
+            });
+            core.info(`Updated ${eligible.length} contributors across ${repos.length} repositories`);
